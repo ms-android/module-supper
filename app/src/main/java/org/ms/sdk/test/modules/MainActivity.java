@@ -12,23 +12,15 @@ import org.ms.module.test.R;
 
 
 public class MainActivity extends AppCompatActivity {
-
     private static final String TAG = "MainActivity";
-
-
     private Button buttonLog;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         buttonLog = findViewById(R.id.buttonLog);
-
         Modules.getControlSwitch().setRequestLog(true);
-
 
         buttonLog.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-
             }
         });
     }
