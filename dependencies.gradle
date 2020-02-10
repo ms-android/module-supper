@@ -1,7 +1,7 @@
 ext {
     compileSdkVersion = 28
     buildToolsVersion = "28.0.3"
-    minSdkVersion = 21
+    minSdkVersion = 18
     targetSdkVersion = 28
 
     maven_version = "laster-release"

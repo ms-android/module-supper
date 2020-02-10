@@ -6,6 +6,7 @@ import org.ms.module.supper.inter.data.IDataAdapter;
 import org.ms.module.supper.inter.module.ModuleAdapter;
 
 public class DataModule extends ModuleAdapter {
+
     private static final String CLASSPATH = "org.ms.module.data.impl.DataImpl";
     private IData iData;
 
