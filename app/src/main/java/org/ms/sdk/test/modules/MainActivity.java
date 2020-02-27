@@ -1,13 +1,12 @@
 package org.ms.sdk.test.modules;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import org.ms.module.supper.client.Modules;
 import org.ms.module.supper.inter.common.ICallBack;
-import org.ms.module.supper.inter.module.Module;
 import org.ms.module.test.R;
 
 

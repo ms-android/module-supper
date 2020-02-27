@@ -2,16 +2,19 @@ package org.ms.module.base.rxview;
 
 
 import android.os.Looper;
-import android.support.annotation.CheckResult;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.CheckResult;
+import androidx.annotation.NonNull;
+
 import android.view.View;
 
 import java.util.concurrent.TimeUnit;
 
-import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.functions.Consumer;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.ObservableEmitter;
+import io.reactivex.rxjava3.core.ObservableOnSubscribe;
+import io.reactivex.rxjava3.functions.Consumer;
 
 import static org.ms.module.base.rxview.Preconditions.checkNotNull;
 import static org.ms.module.base.rxview.Preconditions.checkUiThread;
@@ -31,7 +34,7 @@ public class RxView {
         for (View view : target) {
             RxView.onClick(view).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(new Consumer<View>() {
                 @Override
-                public void accept(@io.reactivex.annotations.NonNull View view) throws Exception {
+                public void accept(@io.reactivex.rxjava3.annotations.NonNull View view) throws Exception {
                     action.onClick(view);
                 }
             });
@@ -64,7 +67,7 @@ public class RxView {
         }
 
         @Override
-        public void subscribe(@io.reactivex.annotations.NonNull final ObservableEmitter<View> e) throws Exception {
+        public void subscribe(@io.reactivex.rxjava3.annotations.NonNull final ObservableEmitter<View> e) throws Exception {
             checkUiThread();
 
             View.OnClickListener listener = new View.OnClickListener() {
