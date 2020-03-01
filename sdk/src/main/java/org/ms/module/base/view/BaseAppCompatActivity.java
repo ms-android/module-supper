@@ -2,8 +2,10 @@ package org.ms.module.base.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.view.View;
@@ -61,18 +63,19 @@ public abstract class BaseAppCompatActivity<P extends IPresenter> extends AppCom
             setContentView(getLayout());
         }
 
-
         initView();
-
-
     }
 
-    protected abstract void initView();
+    protected void initView() {
+    }
 
-    protected abstract int getLayout();
+    protected int getLayout() {
+        return 0;
+    }
 
-    protected abstract boolean isFullScreen();
-
+    protected boolean isFullScreen() {
+        return false;
+    }
 
     public void showDialog() {
         Modules.getUtilsModule().getThreadPoolUtils().runOnMainThread(new Runnable() {
